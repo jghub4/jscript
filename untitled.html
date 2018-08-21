@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>L2 Change Request Form</title>
+    <link href="http://fonts.googleapis.com/css?family=Denk+One"
+          rel="stylesheet" type="text/css">
+    <link href="PageStyle.css" rel="stylesheet" type="text/css">
+    <script src="PageApp.js">
+
+    </script>
+
+
+</head>
+<header>
+    <div class="header1">
+        <h4>*** NO IMPACT ***<br>
+            <p>*** Impact, execution on Thursday ***<br></p>
+            <p>*** Impact, execution on Sunday ***<br></p>
+            <p>*** Impact, with L2 approval ***<br></h4></p>
+<p> Remove lines not applicable above  </p>
+    </div>
+</header>
+<body>
+
+<p><h2 class="h2Top">If L2 approval is required, please fill in the necessary information on all of the below tabs:</h2></p>
+
+<ul class="tab">
+    <li><a href="#" class="tablinks" onclick="openMyTab(event, 'L2_APPROVAL')">L2_APPROVAL</a></li>
+<li><a href="#" class="tablinks" onclick="openMyTab(event, 'Impact_type')">IMPACT TYPE (above)</a></li>
+    <li><a href="#" class="tablinks" onclick="openMyTab(event, 'Description')">Description</a></li>
+    <li><a href="#" class="tablinks" onclick="openMyTab(event, 'RID')">RISK & IMPACT DEPLOYMENT </a></li>
+    <li><a href="#" class="tablinks" onclick="openMyTab(event, 'CEXE')">CHANGE EXECUTION </a></li>
+    <li><a href="#" class="tablinks" onclick="openMyTab(event, 'QT')">QUALITY & TESTING </a></li>
+    <li><a href="#" class="tablinks" onclick="openMyTab(event, 'RREF')">RULES & REFERENCE </a></li>
+</ul>
+
+<div id="L2_APPROVAL" class="tabcontent">
+
+    <form action="http://www.example.com/comments.php">
+        <p>Why is a L2 approval needed?</p>
+<textarea id="inputTextToSave" name="comments" cols="100" rows="4">Enter
+your comments...</textarea>
+    </form>
+    <form action="http://www.example.com/comments.php">
+        <p>Who approved this change from the customer side?</p>
+<textarea id="inputTextToSave1" name="comments" cols="100" rows="4">Enter
+details here...</textarea>
+
+    </form>
+</div>
+
+<div id="Impact_type" class="tabcontent">
+    <form action="http://www.example.com/comments.php">
+        <p>Specify the impact on High Surveilance (verhoogde dijkbewaking) production applications/services.</p>
+<textarea id="inputTextToSaveI" name="comments" cols="100" rows="4">Enter here...</textarea>
+    </form>
+</div>
+
+<div id="Description" class="tabcontent">
+    <form action="http://www.example.com/comments.php">
+        <p>Describe the change in simple terms (including the consequences of not executing the change) </p>
+        <textarea id="inputTextToSave3" name="comments" cols="100" rows="4">Describe here...</textarea>
+    </form>    
+</div>
+
+<div id="RID" class="tabcontent">
+
+    <form action="http://www.example.com/comments.php">
+        <p>Describe the risk of the change</p>
+        <textarea id="inputTextToSave5" name="comments" cols="100" rows="4">Describe here...</textarea>
+
+    </form>
+
+  
+    <form action="http://www.example.com/comments.php">
+        <p>Describe the business impact (including the worst-case scenario) </p>
+<textarea id="inputTextToSave6" name="comments" cols="100" rows="4">Describe here</textarea>
+    </form>
+<form action="http://www.example.com/comments.php">
+        <p>Describe the risk mitigating measures </p>
+<textarea id="inputTextToSave7" name="comments" cols="100" rows="4">Describe here</textarea>
+    </form>
+</div>
+
+<div id="CEXE" class="tabcontent">
+    <form action="http://www.example.com/profile.php">
+        <p>Deployment will be executed with a script (in deployment tool) </p>
+        <select id="bf1" name="Select">
+            <option value="0">Select</option>
+            <option value="1">Yes</option>
+            <option value="2">No(explain why not) </option>
+        </select>
+    </form>
+    <form action="http://www.example.com/comments.php">
+        <p>Person to contact other than the Change Owner in the General tab? </p>
+        <textarea id="inputTextToSave9" name="comments" cols="100" rows="4">[Name & cell phone number here] </textarea>
+    </form>    
+</div>
+
+<div id="QT" class="tabcontent">
+     <form action="http://www.example.com/profile.php" name = "qtf1">
+        <p>Deployment has been tested in T and A environments and were successful </p>
+        <select id="qt1" name="Select" onchange="if (this.value=='other1'){this.form['other1'].style.visibility='visible'}else {this.form['other1'].style.visibility='hidden'};">
+            <option value="0">Select</option>
+            <option value="1">Yes</option>
+            <option value="other1">No(explain why not)</option>
+        </select>
+<br> <textarea name="other1" style="visibility:hidden;" id="input1" rows="2" cols="80" wrap="hard"> </textarea>
+    </form>
+<form action="http://www.example.com/profile.php" name = "qtf2">
+        <p>Performance and load tests have been performed and were successful </p>
+        <select id="qt2" name="Select" onchange="if (this.value=='other2'){this.form['other2'].style.visibility='visible'}else {this.form['other2'].style.visibility='hidden'};">
+            <option value="0">Select</option>
+            <option value="1">Yes</option>
+            <option value="other2">No(explain why not) </option>
+        </select>
+<br> <textarea name="other2" style="visibility:hidden;" id="input2" rows="2" cols="80" wrap="hard"> </textarea>   </form>
+<form action="http://www.example.com/profile.php" name = "qtf3">
+        <p>The runbook has been tested in a 'production like' environment (including fallback scenario) </p>
+        <select id="qt3" name="Select" onchange="if (this.value=='other3'){this.form['other3'].style.visibility='visible'}else {this.form['other3'].style.visibility='hidden'};">
+            <option value="0">Select</option>
+            <option value="1">Yes</option>
+            <option value="other3">No(explain why not) </option>
+        </select>
+<br> <textarea name="other3" style="visibility:hidden;" id="input3" rows="2" cols="80" wrap="hard"> </textarea>   </form>
+    </form>
+<form action="http://www.example.com/profile.php" name = "qtf4">
+        <p> Is a functional test after the change required? </p>
+        <select id="qt4" name="Select" onchange="if (this.value=='other4'){this.form['other4'].style.visibility='visible'}else {this.form['other4'].style.visibility='hidden'};">
+            <option value="0">Select</option>
+            <option value="1">Yes(who?) </option>
+            <option value="other4">No(explain why not) </option>
+        </select>
+<br> <textarea name="other4" style="visibility:hidden;" id="input4" rows="2" cols="80" wrap="hard"> </textarea>   </form>
+    </form>
+</div>
+
+
+<div id="RREF" class="tabcontent">
+
+    <strong><h3><u>RULES & REFERENCE </h3></strong></u>
+
+
+<ul class="gen" type="square">
+    <li>Use the following naming convention for the change title: [Environment] [Affeccted Business Domain] rest of the title</li>
+<li>You MUST meet all criteria in the Infra DoD when deploying a change into production environment. </li>
+    <li>Use MyRFM (disable monitoring, put CI's in maintenance mode) </li>
+    <li>A failed change will result in a Blameless Post Mortem (BPM)</li>
+</ul>
+<p> See Confluence for the DoD, use of and examples of naming convention:  <a href="url">
+https://confluence.europe.intranet/pages/viewpage.action?pageId=124019139 </a> </p>
+</div>
+<section class="submit-input">
+    <br>
+    <br>
+    <br>
+    <p> <strong> After filling all the tabs click Submit</p> </strong>
+    <table>
+        <tr>
+            <td>Filename to Save As:</td>
+            <td><input id="inputFileNameToSaveAs"></input></td>
+            <td><button onclick="saveTextAsFile()">Save Text to File</button></td>
+        </tr>
+    </table>
+
+</section>
+
+<script type='text/javascript'>
+
+    function saveTextAsFile()
+    {
+        var textToWrite_t1 = "L2 Approval" + "\n" + "---------------------------------------" + "\n" + "Why is a L2 approval needed?" + "\n";
+        var textToWrite_t1s1 = "Who approved this change from the customer side?" + "\n";
+        
+var textToWrite_t2 = "---------------------------------------" + "\n" +  "IMPACT TYPE" + "\n" + "---------------------------------------" + "\n" +  "Specify the impact on High Surveilance (verhoogde dijkbewaking) production applications/services." + "\n";
+        var textToWrite_t3 = "---------------------------------------" + "\n" +  "DESCRIPTION" + "\n" + "---------------------------------------" + "\n" + "Describe the change in simple terms (including the consequences of not executing the change)"  + "\n";
+        
+var textToWrite_t4 = "---------------------------------------" + "\n" +  "RISK & IMPACT DEPLOYMENT"+ "\n" + "---------------------------------------" + "\n" + "Describe the risk of the change" + "\n";
+        var textToWrite_t4s1 = "Describe the business impact (including the worst-case scenario)"+ "\n";
+        var textToWrite_t4s2 = "Describe the risk mitigating measures"+ "\n";
+             
+
+        var textToWrite_t5 = "---------------------------------------" + "\n" +  "CHANGE EXECUTION" + "\n" + "---------------------------------------" + "\n" +  "Deployment will be executed with a script (in deployment tool) "  + "\n";
+        var textToWrite_t5s1 = "Person to contact other than the Change Owner in the General tab?"+ "\n";
+        
+        var textToWrite_t6 = "---------------------------------------" + "\n" +  "QUALITY & TESTING " + "\n" + "---------------------------------------" + "\n" +  "Deployment has been tested in T and A environments and were successful "  + "\n";
+        var textToWrite_t6s1 = "Performance and load tests have been performed and were successful "+ "\n";
+var textToWrite_t6s2 = "The runbook has been tested in a 'production like' environment (including fallback scenario)  "+ "\n";
+var textToWrite_t6s3 = "Is a functional test after the change required?"+ "\n";
+        
+
+        /* L2 Approval */
+        var textToWrite_t1p1 = document.getElementById("inputTextToSave").value;
+        var textToWrite_t1p2 = document.getElementById("inputTextToSave1").value;
+
+/* IMPACT TYPE */
+        var textToWrite_t2p1 = document.getElementById("inputTextToSaveI").value;
+       
+        /* Description */
+        var textToWrite_t3p1 = document.getElementById("inputTextToSave3").value;
+        
+        /* RISK & IMPACT CI*/
+        var textToWrite_t4p1 = document.getElementById("inputTextToSave5").value;
+        var textToWrite_t4p2 = document.getElementById("inputTextToSave6").value;
+        var textToWrite_t4p3 = document.getElementById("inputTextToSave7").value;
+
+
+        var f = document.getElementById("bf1");
+        var strUser1 = f.options[f.selectedIndex].text;
+        var g = document.getElementById("qt1");
+        var strUser2 = g.options[g.selectedIndex].text;
+        var textToWrite_qt1Inp = document.getElementById("input1").value;
+
+        /* Before*/
+        var textToWrite_t5p1 = document.getElementById("inputTextToSave9").value;
+
+
+
+        var h = document.getElementById("qt2");
+        var strUser3 = h.options[h.selectedIndex].text;
+        var textToWrite_qt1Inp = document.getElementById("input2").value;
+        var i = document.getElementById("qt3");
+        var strUser4 = i.options[i.selectedIndex].text;
+        var textToWrite_qt1Inp = document.getElementById("input3").value;
+        var j = document.getElementById("qt4");
+        var strUser5 = j.options[j.selectedIndex].text;
+        var textToWrite_qt1Inp = document.getElementById("input4").value;
+var strUser99 = "Explantion: ";
+       var textToWrite_qt2Inp = document.getElementById("input2").value;
+       var textToWrite_qt3Inp = document.getElementById("input3").value;
+       var textToWrite_qt4Inp = document.getElementById("input4").value;
+
+
+        
+        var textToWrite_tab1 = textToWrite_t1 + "\n" + textToWrite_t1p1 + "\n\n" + textToWrite_t1s1 + "\n"  + textToWrite_t1p2 + "\n\n";
+
+        var textToWrite_tab2 = textToWrite_t2 + "\n" + textToWrite_t2p1 + "\n\n";
+
+
+        var textToWrite_tab3 = textToWrite_t3 + "\n" + textToWrite_t3p1 +  "\n\n";
+
+
+        var textToWrite_tab4 = textToWrite_t4 + "\n" + textToWrite_t4p1 + "\n\n" + textToWrite_t4s1 + "\n"  + textToWrite_t4p2 + "\n\n" + textToWrite_t4s2 + "\n"  + textToWrite_t4p3 + "\n\n";
+
+        var textToWrite_tab5 = textToWrite_t5 + "\n" + strUser1 + "\n\n" + textToWrite_t5s1 + "\n" + textToWrite_t5p1 + "\n\n" ;
+
+        var textToWrite_tab6 = textToWrite_t6 + "\n" + strUser2 +  "\n" + strUser99 + textToWrite_qt1Inp + "\n\n" + textToWrite_t6s1 + "\n"  + strUser3 +  "\n" + strUser99 + textToWrite_qt2Inp + "\n\n"  + textToWrite_t6s2 + "\n"  + strUser4 +  "\n" + strUser99 + textToWrite_qt3Inp + "\n\n" + textToWrite_t6s3 + "\n"  + strUser5 +  "\n" + strUser99 + textToWrite_qt4Inp + "\n";
+
+        var textToWrite = textToWrite_tab1 + "\n" + textToWrite_tab2 + "\n" + textToWrite_tab3  +"\n" + textToWrite_tab4  + "\n" + textToWrite_tab5 + "\n" + textToWrite_tab6 + "\n" ;
+
+        textToWrite = textToWrite.replace(/\n/g, "\r\n");
+        var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
+        var fileNameToSaveAs = document.getElementById("inputFileNameToSaveAs").value;
+
+        var downloadLink = document.createElement("a");
+        downloadLink.download = fileNameToSaveAs;
+        downloadLink.innerHTML = "Download File";
+        if (window.webkitURL != null)
+        {
+            // Chrome allows the link to be clicked
+            // without actually adding it to the DOM.
+            downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+        }
+        else
+        {
+            // Firefox requires the link to be added to the DOM
+            // before it can be clicked.
+            downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+            downloadLink.onclick = destroyClickedElement;
+            downloadLink.style.display = "none";
+            document.body.appendChild(downloadLink);
+        }
+
+        downloadLink.click();
+    }
+
+    function destroyClickedElement(event)
+    {
+        document.body.removeChild(event.target);
+    }
+
+</script>
+
+<script type="text/javascript">
+function checkOption(obj) {
+ 
+
+var select_element1 = document.getElementById( "qt1" );
+var selected1 = select_element1.options[ select_element1.selectedIndex ].value
+
+if(selected1 == "2"){
+  document.getElementById("input1").disabled = false;
+}else{
+  document.getElementById("input1").disabled = true;
+}
+
+if(document.qtf1.qt1.value != "2" )
+   {
+     document.getElementById('input1').value='';
+   }
+
+var select_element2 = document.getElementById( "qt2" );
+var selected2 = select_element2.options[ select_element2.selectedIndex ].value
+
+if(selected2 == "2"){
+  document.getElementById("input2").disabled = false;
+}else{
+  document.getElementById("input2").disabled = true;
+}
+
+if(document.qtf2.qt2.value != "2" )
+   {
+     document.getElementById('input2').value='';
+   }
+
+var select_element3 = document.getElementById( "qt3" );
+var selected3 = select_element3.options[ select_element3.selectedIndex ].value
+
+if(selected3 == "2"){
+  document.getElementById("input3").disabled = false;
+}else{
+  document.getElementById("input3").disabled = true;
+}
+
+if(document.qtf3.qt3.value != "2" )
+   {
+     document.getElementById('input3').value='';
+   }
+
+var select_element4 = document.getElementById( "qt4" );
+var selected4 = select_element4.options[ select_element4.selectedIndex ].value
+
+if(selected4 == "2"){
+  document.getElementById("input4").disabled = false;
+}else{
+  document.getElementById("input4").disabled = true;
+}
+if(document.qtf4.qt4.value != "2" )
+   {
+     document.getElementById('input4').value='';
+   }
+
+}
+</script>
+</body>
+</html>
+
